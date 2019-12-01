@@ -39,7 +39,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       }
       $paslon['nama_paslon'] = $input->nama_paslon;
       $paslon['nama_koalisi'] = $input->nama_koalisi;
-      $paslon['fakultas_koalisi'] = $input->fakultas_koalisi;
       $paslon['nomor_urut'] = $input->nomor_urut;
       $paslon['visimisi'] = $input->visimisi;
       $this->paslon->insertPaslon($paslon);
@@ -126,7 +125,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       if($this->upload->do_upload('gambar_capres')){
         $capres['gambar_capres'] = $this->upload->data('file_name');
       }
-
       $cawapres['nama_cawapres'] = $this->input->post('nama_cawapres', TRUE);
       $cawapres['jurusan_cawapres'] = $this->input->post('jurusan_cawapres', TRUE);
       $cawapres['angkatan_cawapres'] = $this->input->post('angkatan_cawapres', TRUE);

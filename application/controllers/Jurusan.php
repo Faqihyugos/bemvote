@@ -69,7 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $id = $this->input->post('id_jurusan', TRUE);
       if($this->jurusan->deleteJurusan($id)){
         $this->session->set_flashdata('msg', 'Jurusan Berhasil Di Hapus!');
-        redirect('Jurusan');
+        redirect('jurusan');
       }
     }
 
