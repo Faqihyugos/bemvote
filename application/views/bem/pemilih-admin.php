@@ -66,20 +66,13 @@
 								<td><?= $i++ ?></td>
 								<td><?= $pemilih->npm_pemilih ?></td>
 								<td><?= $pemilih->nama_pemilih ?></td>
-								<!-- <td class="status">
-                <?php if($pemilih->status_pemilih === 'ya'): ?>
-                  <span class="fa fa-check"></span>
-                <?php else: ?>
-                  <span class="fa fa-times"></span>
-                <?php endif ?>
-                </td> -->
-								<!-- <td class="status">
+								<td class="status">
                 <?php if($pemilih->telah_memilih === 'ya'): ?>
                   <span class="fa fa-check"></span>
                 <?php else: ?>
                   <span class="fa fa-times"></span>
                 <?php endif ?>
-                </td> -->
+                </td>
 								<td><?= $pemilih->terakhir_login ?></td>
                 <?php if($this->session->has_userdata('admin')): ?>
 								<td>
