@@ -11,11 +11,11 @@ $route['login-admin'] = 'login/admin';
 $route['logout'] = 'login/logout';
 
 // CRUD Fakultas
-$route['fakultas'] = 'fakultas/index';
-$route['fakultas/post'] = 'fakultas/store';
-$route['fakultas/edit/(:num)'] = 'fakultas/edit/$1';
-$route['fakultas/patch'] = 'fakultas/update';
-$route['fakultas/delete'] = 'fakultas/destroy';
+$route['jurusan'] = 'jurusan/index';
+$route['jurusan/post'] = 'jurusan/store';
+$route['jurusan/edit/(:num)'] = 'jurusan/edit/$1';
+$route['jurusan/patch'] = 'jurusan/update';
+$route['jurusan/delete'] = 'jurusan/destroy';
 
 // CRD Pemilih
 $route['pemilih'] = 'pemilih/index';
