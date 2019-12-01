@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $tgllahir = $this->input->post('tgl_lahir', TRUE);
         $pemilih = $this->login->checkPemilih($npm, $tgllahir);
 
-        if(count($pemilih)){
+        if($pemilih > 0){
           if ($pemilih->telah_memilih === 'tidak') {
             $data = [
               'login' => TRUE,
@@ -39,12 +39,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               'id_pemilih' => $pemilih->id_pemilih,
               'npm' => $pemilih->npm_pemilih,
               'nama' => $pemilih->nama_pemilih,
-              'user' => 'Mahasiswa'
+              'user' => 'Mahasiswa',
             ];
           }
 
           $this->session->set_userdata($data);
-          // $this->login->aktifkanStatusPemilih($this->session->userdata('nim'));
+          // $this->login->aktifkanStatusPemilih($this->session->userdata('npm'));
           $this->login->loginTerakhirPemilih($this->session->userdata('npm'));
           
           if($this->session->userdata('login')){
@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             return;
           }
         }else{
-          $this->session->set_flashdata('error_msg', 'NPM dan/atau Password Anda Salah');
+          $this->session->set_flashdata('error_msg', 'Username dan/atau Password Anda Salah');
           $input = (object) $this->input->post(null, TRUE);
           $this->load->view('bem/login', compact('input'));
         }
@@ -74,7 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $password = $this->input->post('password', TRUE);
         $admin = $this->login->checkAdmin($username, $password);
 
-        if(count($admin)){
+        if($admin > 0){
           if ($admin->hak_akses === 'admin') {
             $data = [
               'login' => TRUE,
