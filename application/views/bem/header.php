@@ -55,7 +55,7 @@
 				<li><a href="<?= base_url('pemilih-admin') ?>"><em class="fa fa-users">&nbsp;</em> Pemilih</a></li>
 			<?php endif ?>
 			<?php if(!empty($this->session->userdata('admin'))): ?>
-				<li><a href="<?= base_url('fakultas') ?>"><em class="fa fa-flag">&nbsp;</em> Fakultas</a></li>
+				<li><a href="<?= base_url('jurusan') ?>"><em class="fa fa-flag">&nbsp;</em> Jurusan</a></li>
 				<li><a href="<?= base_url('admin') ?>"><em class="fa fa-eye">&nbsp;</em> Admin</a></li>
 				<li><a href="<?= base_url('suara-masuk') ?>"><em class="fa fa-comment">&nbsp;</em> Suara Masuk</a></li>
 			<?php endif ?>
@@ -63,8 +63,8 @@
 			<li><a href="<?= base_url('statistik-pemilih') ?>"><em class="fa fa-bar-chart">&nbsp;</em> Statistik Pemilih</a></li>
 			<?php endif ?>
 			<?php if(!empty($this->session->userdata('operator'))): ?>
-			<li><a href="<?= base_url('statistik-fakultas/'.$this->session->userdata('slug_fakultas')); ?>"><em class="fa fa-bar-chart">&nbsp;</em> Statistik Fakultas</a></li>
-			<li><a href="<?= base_url('live-count-fakultas/'.$this->session->userdata('slug_fakultas')); ?>"><em class="fa fa-database">&nbsp;</em> Live Count Fakultas</a></li>
+			<li><a href="<?= base_url('statistik-jurusan/'.$this->session->userdata('slug_jurusan')); ?>"><em class="fa fa-bar-chart">&nbsp;</em> Statistik Jurusan</a></li>
+			<li><a href="<?= base_url('live-count-jurusan/'.$this->session->userdata('slug_jurusan')); ?>"><em class="fa fa-database">&nbsp;</em> Live Count Jurusan</a></li>
 			<?php endif ?>
 			<?php if(!empty($this->session->userdata('rektor')) || !empty($this->session->userdata('dekan')) || !empty($this->session->userdata('operator')) || !empty($this->session->userdata('admin'))): ?>
 			<li><a href="<?= base_url('live-count') ?>"><em class="fa fa-database">&nbsp;</em> Live Count</a></li>
