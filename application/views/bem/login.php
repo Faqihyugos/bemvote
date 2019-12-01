@@ -34,7 +34,7 @@
 <body>
 	<div class="row">
 		<h1>Ayo Memilih!</h1>
-		<h2>Jangan sia-siakan suara anda untuk UNG yang Lebih Baik!</h2>
+		<h2>Jangan sia-siakan suara anda untuk STMIK JAKARTA yang Lebih Baik!</h2>
 		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 			<div class="login-panel panel panel-default">
 				<div class="panel-heading">Log in</div>

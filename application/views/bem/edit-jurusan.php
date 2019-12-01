@@ -5,13 +5,13 @@
 				<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">Edit Fakultas</li>
+				<li class="active">Edit Jurusan</li>
 			</ol>
 		</div><!--/.row-->
 
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Edit Fakultas</h1>
+				<h1 class="page-header">Edit Jurusan</h1>
 			</div>
 		</div><!--/.row-->
 
@@ -19,17 +19,17 @@
 			<div class="col-md-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						Edit Fakultas
+						Edit Jurusan
 						<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>
 					<div class="panel-body">
-              <?= form_open('fakultas/patch', ['class' => 'form-horizontal']) ?>
+              <?= form_open('jurusan/patch', ['class' => 'form-horizontal']) ?>
 						     <?= validation_errors() ?>
-						     <?= form_hidden('id_fakultas', $fakultas->id_fakultas) ?>
+						     <?= form_hidden('id_jurusan', $jurusan->id_jurusan) ?>
 								<!-- Name input-->
 								<div class="form-group">
-									<label class="col-md-3 control-label" for="name">Nama Fakultas</label>
+									<label class="col-md-3 control-label" for="name">Nama Jurusan</label>
 									<div class="col-md-9">
-                    <?= form_input('nama_fakultas', $fakultas->nama_fakultas, ['class' => 'form-control']) ?>
+                    <?= form_input('nama_jurusan', $jurusan->nama_jurusan, ['class' => 'form-control']) ?>
 									</div>
 								</div>
 								<!-- Form actions -->
