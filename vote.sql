@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 01 Des 2019 pada 14.20
+-- Waktu pembuatan: 01 Des 2019 pada 20.16
 -- Versi server: 10.3.16-MariaDB
 -- Versi PHP: 7.3.7
 
@@ -42,7 +42,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id_admin`, `nama_admin`, `user_admin`, `password_admin`, `hak_akses`, `login_terakhir`) VALUES
-(1, 'Faqih', 'Admin', 'Admin11', 'admin', '2019-11-30 00:00:00');
+(1, 'Faqih', 'Admin', 'Admin11', 'admin', '2019-12-02 01:02:34'),
+(2, 'Ekhsan', 'ekhsan', 'admin11', 'panitia-validasi', '2019-12-02 02:11:28');
 
 -- --------------------------------------------------------
 
@@ -59,6 +60,14 @@ CREATE TABLE `detailcapres` (
   `id_paslon` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data untuk tabel `detailcapres`
+--
+
+INSERT INTO `detailcapres` (`id_detail_capres`, `nama_capres`, `jurusan_capres`, `angkatan_capres`, `gambar_capres`, `id_paslon`) VALUES
+(1, 'Anto wiyahya', 'Sistem Informasi', '2017', 'Nvidia-Green-Logo-Wallpaper-1.jpg', 1),
+(2, 'Fadlan Agung', 'Sistem Informasi', '2017', 'gros-community.png', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -73,6 +82,14 @@ CREATE TABLE `detailcawapres` (
   `gambar_cawapres` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `id_paslon` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `detailcawapres`
+--
+
+INSERT INTO `detailcawapres` (`id_detail_cawapres`, `nama_cawapres`, `jurusan_cawapres`, `angkatan_cawapres`, `gambar_cawapres`, `id_paslon`) VALUES
+(1, 'Iwan samarudin', 'Sistem Komputer', '2017', 'gros-red.png', 1),
+(2, 'Cardinal ', 'Sistem Komputer', '2017', 'gros-lumut.png', 2);
 
 -- --------------------------------------------------------
 
@@ -109,6 +126,14 @@ CREATE TABLE `paslon` (
   `visimisi` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data untuk tabel `paslon`
+--
+
+INSERT INTO `paslon` (`id_paslon`, `nama_koalisi`, `nama_paslon`, `jurusan_koalisi`, `nomor_urut`, `visimisi`) VALUES
+(1, 'Stmik Bersatu', 'Anto & Iwan', 'Sistem Informasi, Sistem Komputer', '1', '<p xss=removed><span xss=removed>VISI</span></p>\r\n<p xss=removed><em xss=removed>“MEWUJUDKAN BADAN EKSEKUTIF MAHASISWA YANG PROGRESIF, ASPIRATIF, BERKUALITAS, UNGGUL DAN INDEPENDEN</em>”</p>\r\n<p xss=removed><span xss=removed>MISI</span></p>\r\n<ol xss=removed>\r\n<li xss=removed>MENINGKATKAN KOORDINASI DAN KUALITAS KINERJA PENGURUS BADAN EKSEKUTIF MAHASISWA</li>\r\n<li xss=removed>MENINGKATKAN KOORDINASI DAN KERJASAMA DENGAN ORGANISASI INTERNAL MAUPUN EKSTERNAL</li>\r\n<li xss=removed>PENINGKATAN MUTU KEGIATAN MAHASISWA</li>\r\n<li xss=removed>MENGEMBANGKAN KEMANDIRIAN KEGIATAN MAHASISWA</li>\r\n<li xss=removed>MEMPERBANYAK KEGIATAN DIBIDANG KEMAHASISWAAN</li>\r\n<li xss=removed>BEKERJA KERAS, IKHLAS, CERDAS, TERBUKA, TOTALITAS LOYALITAS TANPA BATAS</li>\r\n</ol>'),
+(2, 'STMIK BARU', 'Fadlan & Carlos', 'Sistem Informasi, Sistem Komputer', '2', '<p align=\"center\"><strong>VISI BEM </strong></p>\r\n<p>Menjadikan BEM sebagai lembaga yang interaktif  kepada mahasiswa dan masyarakat untuk bersinergi dalam menciptakan inovasi.</p>\r\n<p align=\"center\"><strong>MISI BEM </strong></p>\r\n<ol>\r\n<li>Membangun Internal berlandaskan kekeluargaan dan bernafaskan profesionalisme.</li>\r\n<li>Merangkul himpunan jurusan dan lembaga kemahasiswaan yang ada di dalam lingkungan kampus.</li>\r\n<li>Menguatkan media aspirasi untuk melayani mahasiswa dan masyarakat secara solutif.</li>\r\n<li>Memfasilitasi pengembangan minat bakat, keilmuan, dan karakter mahasiswa di kancah universitas, nasional, dan internasional.</li>\r\n<li>Menghasilkan kajian dan membangun kerjasama strategis dalam upaya pemecahan masalah nasional dan internasional.</li>\r\n</ol>');
+
 -- --------------------------------------------------------
 
 --
@@ -130,8 +155,10 @@ CREATE TABLE `pemilih` (
 --
 
 INSERT INTO `pemilih` (`id_pemilih`, `npm_pemilih`, `nama_pemilih`, `tgl_lahir`, `telah_memilih`, `terakhir_login`, `id_jurusan`) VALUES
-(1, '10417001', 'Aan aji', '10-01-1999', 'tidak', '2019-11-30 11:48:13', 1),
-(2, '10417002', 'Aulia', '30-10-1999', 'tidak', '2019-11-30 00:00:00', 1);
+(1, '10417001', 'Aan aji', '10-01-1999', 'ya', '2019-12-02 00:57:36', 1),
+(2, '10417002', 'Aulia', '30-10-1999', 'ya', '2019-12-02 00:58:31', 1),
+(3, '20417001', 'dio', '03-02-1999', 'tidak', '2019-12-02 00:00:00', 2),
+(4, '10217001', 'dian', '20-01-1999', 'tidak', '2019-12-02 00:00:00', 3);
 
 -- --------------------------------------------------------
 
@@ -145,6 +172,14 @@ CREATE TABLE `pemilihan` (
   `id_pemilih` int(10) UNSIGNED NOT NULL,
   `id_paslon` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `pemilihan`
+--
+
+INSERT INTO `pemilihan` (`id_pemilihan`, `waktu_memilih`, `id_pemilih`, `id_paslon`) VALUES
+(1, '2019-12-02 00:51:32', 1, 1),
+(2, '2019-12-02 00:58:22', 2, 2);
 
 --
 -- Indexes for dumped tables
@@ -206,43 +241,43 @@ ALTER TABLE `pemilihan`
 -- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_admin` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `detailcapres`
 --
 ALTER TABLE `detailcapres`
-  MODIFY `id_detail_capres` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_detail_capres` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `detailcawapres`
 --
 ALTER TABLE `detailcawapres`
-  MODIFY `id_detail_cawapres` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_detail_cawapres` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `jurusan`
 --
 ALTER TABLE `jurusan`
-  MODIFY `id_jurusan` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_jurusan` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `paslon`
 --
 ALTER TABLE `paslon`
-  MODIFY `id_paslon` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_paslon` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `pemilih`
 --
 ALTER TABLE `pemilih`
-  MODIFY `id_pemilih` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pemilih` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `pemilihan`
 --
 ALTER TABLE `pemilihan`
-  MODIFY `id_pemilihan` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pemilihan` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
