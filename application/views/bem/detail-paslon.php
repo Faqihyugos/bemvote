@@ -29,8 +29,8 @@
               <dt>Nama Paslon</dt>
               <dd><strong><?= $paslon->nama_paslon ?></strong></dd>
 							<br>
-							<dt>Koalisi Fakultas</dt>
-              <dd><strong><?= $paslon->fakultas_koalisi ?></strong></dd>
+							<dt>Koalisi Jurusan</dt>
+              <dd><strong><?= $paslon->jurusan_koalisi ?></strong></dd>
 							<br>
 							<dt>Nomor Urut</dt>
               <dd><strong><?= $paslon->nomor_urut ?></strong></dd>
@@ -41,23 +41,11 @@
               <dt>Nama Cawapres</dt>
               <dd><strong><?= $paslon->nama_cawapres ?></strong></dd>
 							<br>
-              <dt>Fakultas Capres</dt>
-              <dd><strong><?= $paslon->fakultas_capres ?></strong></dd>
-							<br>
-              <dt>Fakultas Cawapres</dt>
-              <dd><strong><?= $paslon->fakultas_cawapres ?></strong></dd>
-							<br>
               <dt>Jurusan Capres</dt>
               <dd><strong><?= $paslon->jurusan_capres ?></strong></dd>
 							<br>
               <dt>Jurusan Cawapres</dt>
               <dd><strong><?= $paslon->jurusan_cawapres ?></strong></dd>
-							<br>
-              <dt>Prodi Capres</dt>
-              <dd><strong><?= $paslon->prodi_capres ?></strong></dd>
-							<br>
-              <dt>Prodi Cawapres</dt>
-              <dd><strong><?= $paslon->prodi_cawapres ?></strong></dd>
 							<br>
               <dt>Angkatan Capres</dt>
               <dd><strong><?= $paslon->angkatan_capres ?></strong></dd>

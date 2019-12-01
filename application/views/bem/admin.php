@@ -40,7 +40,7 @@
 							<tr>
 								<td><?= $i++ ?></td>
 								<td><?= $admin->nama_admin ?></td>
-								<td><?= $admin->username_admin ?></td>
+								<td><?= $admin->user_admin ?></td>
 								<td><?= $admin->hak_akses ?></td>
 								<td><?= $admin->login_terakhir ?></td>
 								<td>
@@ -74,7 +74,7 @@
 								<div class="form-group">
 									<label class="col-md-3 control-label" for="name">Username Admin</label>
 									<div class="col-md-9">
-                    <?= form_input('username_admin', $input->username_admin, ['class' => 'form-control', 'placeholder' => 'soekarno17']) ?>
+                    <?= form_input('user_admin', $input->user_admin, ['class' => 'form-control', 'placeholder' => 'soekarno17']) ?>
 									</div>
 								</div>
 
@@ -91,7 +91,7 @@
 									<label class="col-md-3 control-label" for="name">Hak Akses</label>
 									<div class="col-md-9">
                     <select class="form-control" name="hak_akses">
-                      <option value="operator-teknik">Operator TEKNIK</option>
+                      <!-- <option value="operator-teknik">Operator TEKNIK</option>
                       <option value="operator-fekon">Operator FEKON</option>
                       <option value="operator-fok">Operator FOK</option>
                       <option value="operator-mipa">Operator MIPA</option>
@@ -99,9 +99,12 @@
                       <option value="operator-fip">Operator FIP</option>
                       <option value="operator-pertanian">Operator PERTANIAN</option>
                       <option value="operator-fsb">Operator FSB</option>
-                      <option value="operator-fik">Operator FIK</option>
-                      <option value="dekan">Dekan</option>
-                      <option value="rektor">Rektor</option>
+					  <option value="operator-fik">Operator FIK</option> -->
+					  'admin','panitia-validasi','wakil ketua III','dosen','panitia-pengawas'
+					  <option value="panitia-validasi">Panitia Validasi</option>
+					  <option value="panitia-pengawas">Panitia Pengawas</option>
+                      <option value="dosen">Dosen</option>
+                      <option value="wakil ketua III">Wakil ketua III</option>
                       <option value="admin">Admin</option>
                     </select>
 									</div>

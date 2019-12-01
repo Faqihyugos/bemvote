@@ -25,8 +25,8 @@
 					<div class="panel-body">
               <?= form_open('pemilih/searchpemilihadmin', ['class' => 'form-inline', 'method' => 'get']) ?>
                 <div class="form-group">
-                  <label>NIM </label>
-                  <input type="text" class="form-control" placeholder="531416020" name="nim" value="<?= $nim ?>">
+                  <label>NPM </label>
+                  <input type="text" class="form-control" placeholder="531416020" name="npm" value="<?= $npm ?>">
                 </div>
                 <span>Dengan Nama &nbsp;</span>
                 <div class="form-group">
@@ -40,7 +40,7 @@
 
 				<div class="panel panel-default ">
 					<div class="panel-heading">
-						Pemilih Dengan NIM : <strong><?= $nim ?></strong>
+						Pemilih Dengan NPM : <strong><?= $npm ?></strong>
 						<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span>
 						Dengan Nama : <strong><?= $nama ?></strong>
 						<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span>
@@ -53,7 +53,6 @@
 								<th>No</th>
 								<th>NIM Pemilih</th>
 								<th>Nama Pemilih</th>
-								<th>Status Pemilih</th>
 								<th>Telah Pemilih</th>
 								<th>Terakhir Login</th>
 								<th>Action</th>
@@ -64,15 +63,8 @@
               ?>
 							<tr>
 								<td><?= $i++ ?></td>
-								<td><?= $pemilih->nim_pemilih ?></td>
+								<td><?= $pemilih->npm_pemilih ?></td>
 								<td><?= $pemilih->nama_pemilih ?></td>
-								<td class="status">
-                <?php if($pemilih->status_pemilih === 'ya'): ?>
-                  <span class="fa fa-check"></span>
-                <?php else: ?>
-                  <span class="fa fa-times"></span>
-                <?php endif ?>
-                </td>
 								<td class="status">
                 <?php if($pemilih->telah_memilih === 'ya'): ?>
                   <span class="fa fa-check"></span>

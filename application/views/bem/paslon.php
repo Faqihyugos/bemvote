@@ -27,7 +27,7 @@
 								<th>No</th>
 								<th>Nama Paslon</th>
 								<th>Nama Koalisi</th>
-								<th>Fakultas Koalisi</th>
+								<th>Jurusan Koalisi</th>
 								<th>Nomor Urut</th>
                 <?php if($this->session->has_userdata('admin')): ?>
 								   <th>Action</th>
@@ -41,7 +41,7 @@
 								<td><?= $i++ ?></td>
 								<td><?= $paslon->nama_paslon ?></td>
 								<td><?= $paslon->nama_koalisi ?></td>
-								<td><?= $paslon->fakultas_koalisi ?></td>
+								<td><?= $paslon->jurusan_koalisi ?></td>
 								<td><?= $paslon->nomor_urut ?></td>
                 <?php if($this->session->has_userdata('admin')): ?>
 								<td>
@@ -78,10 +78,16 @@
 								<div class="form-group">
 									<label class="col-md-3 control-label" for="name">Nama Koalisi</label>
 									<div class="col-md-9">
-                    <?= form_input('nama_koalisi', $input->nama_koalisi, ['class' => 'form-control', 'placeholder' => 'UNG BERSATU']) ?>
+                    <?= form_input('nama_koalisi', $input->nama_koalisi, ['class' => 'form-control', 'placeholder' => 'STMIK BERSATU']) ?>
 									</div>
 								</div>
-
+								<!-- Name input-->
+								<div class="form-group">
+									<label class="col-md-3 control-label" for="name">Nama Koalisi</label>
+									<div class="col-md-9">
+                    <?= form_input('nama_koalisi', $input->jurusan_koalisi, ['class' => 'form-control', 'placeholder' => 'Sistem Infromasi,Sistem Komputer,Manajemen Informasi']) ?>
+									</div>
+								</div>
                 <div class="form-group">
 									<label class="col-md-3 control-label" for="name">Nomor Urut</label>
 									<div class="col-md-9">

@@ -40,9 +40,9 @@
 								</div>
 								<!-- Desc body -->
 								<div class="form-group">
-									<label class="col-md-3 control-label" for="message">Fakultas Koalisi</label>
+									<label class="col-md-3 control-label" for="message">Jurusan Koalisi</label>
 									<div class="col-md-9">
-                    <?= form_textarea('fakultas_koalisi', $paslon->fakultas_koalisi, ['class' => 'form-control', 'cols' => '8', 'row' => '3']) ?>
+                    <?= form_input('jurusan_koalisi', $paslon->jurusan_koalisi, ['class' => 'form-control', 'cols' => '8', 'row' => '3']) ?>
 									</div>
 								</div>
                 <div class="form-group">
@@ -71,18 +71,6 @@
 									</div>
 								</div>
                 <div class="form-group">
-									<label class="col-md-3 control-label" for="name">Fakultas Capres</label>
-									<div class="col-md-9">
-                    <?= form_input('fakultas_capres', $paslon->fakultas_capres, ['class' => 'form-control']) ?>
-									</div>
-								</div>
-                <div class="form-group">
-									<label class="col-md-3 control-label" for="name">Fakultas Cawapres</label>
-									<div class="col-md-9">
-                    <?= form_input('fakultas_cawapres', $paslon->fakultas_cawapres, ['class' => 'form-control']) ?>
-									</div>
-								</div>
-                <div class="form-group">
 									<label class="col-md-3 control-label" for="name">Jurusan Capres</label>
 									<div class="col-md-9">
                     <?= form_input('jurusan_capres', $paslon->jurusan_capres, ['class' => 'form-control']) ?>
@@ -92,18 +80,6 @@
 									<label class="col-md-3 control-label" for="name">Jurusan Cawapres</label>
 									<div class="col-md-9">
                     <?= form_input('jurusan_cawapres', $paslon->jurusan_cawapres, ['class' => 'form-control']) ?>
-									</div>
-								</div>
-                <div class="form-group">
-									<label class="col-md-3 control-label" for="name">Prodi Capres</label>
-									<div class="col-md-9">
-                    <?= form_input('prodi_capres', $paslon->prodi_cawapres, ['class' => 'form-control']) ?>
-									</div>
-								</div>
-                <div class="form-group">
-									<label class="col-md-3 control-label" for="name">Prodi Cawapres</label>
-									<div class="col-md-9">
-                    <?= form_input('prodi_cawapres', $paslon->prodi_cawapres, ['class' => 'form-control']) ?>
 									</div>
 								</div>
                 <div class="form-group">
