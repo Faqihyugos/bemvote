@@ -114,7 +114,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     }
 
     public function jumlahsearchPemilihByAdmin($npm, $nama){
-      return $this->db->select('*')->from('pemilih')->join('jurusan','pemilih.id_jurusan = jurusan.id_fakultas')->like('npm_pemilih', $npm)->like('nama_pemilih', $nama)->order_by('npm_pemilih', 'ASC')->get()->num_rows();
+      return $this->db->select('*')->from('pemilih')->join('jurusan','pemilih.id_jurusan = jurusan.id_jurusan')->like('npm_pemilih', $npm)->like('nama_pemilih', $nama)->order_by('npm_pemilih', 'ASC')->get()->num_rows();
     }
 
   }

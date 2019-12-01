@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     // Menambahkan Jurusan
     public function insertJurusan($data){
-      return $this->db->insert('Jurusan', $data);
+      return $this->db->insert('jurusan', $data);
     }
 
   }

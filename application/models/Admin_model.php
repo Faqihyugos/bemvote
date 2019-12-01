@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     public function adminDefaultValues(){
       return [
         'nama_admin' => '',
-        'username_admin' => '',
+        'user_admin' => '',
         'password_admin' => ''
       ];
     }
@@ -36,8 +36,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           'rules' => 'trim|required'
         ],
         [
-          'field' => 'username_admin',
-          'label' => 'Username Admin',
+          'field' => 'user_admin',
+          'label' => 'User Admin',
           'rules' => 'trim|required'
         ],
         [
