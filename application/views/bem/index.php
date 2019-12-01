@@ -27,7 +27,7 @@
 							</div>
 							<div class="large"><?= $paslon->nomor_urut ?></div>
 							<h2><?= $paslon->nama_paslon ?></h2>
-							<h4><strong><?= $paslon->fakultas_koalisi ?></strong></h4>
+							<h4><strong><?= $paslon->jurusan_koalisi ?></strong></h4>
 							<?php if($this->session->has_userdata('pemilih')): ?>
 								<?= form_open('vote/index', ['style' => 'display:inline-block; margin:15px 15px 0 15px']) ?>
 									<input type="hidden" name="id_pemilih" value="<?= $this->session->userdata('id_pemilih') ?>">

@@ -83,9 +83,9 @@
 								</div>
 								<!-- Name input-->
 								<div class="form-group">
-									<label class="col-md-3 control-label" for="name">Nama Koalisi</label>
+									<label class="col-md-3 control-label" for="name">Jurusan Koalisi</label>
 									<div class="col-md-9">
-                    <?= form_input('nama_koalisi', $input->jurusan_koalisi, ['class' => 'form-control', 'placeholder' => 'Sistem Infromasi,Sistem Komputer,Manajemen Informasi']) ?>
+                    <?= form_input('jurusan_koalisi', $input->jurusan_koalisi, ['class' => 'form-control', 'placeholder' => 'Sistem Infromasi,Sistem Komputer,Manajemen Informasi']) ?>
 									</div>
 								</div>
                 <div class="form-group">
