@@ -27,9 +27,9 @@
 						<table class="table">
 							<tr>
 								<th>No</th>
-								<th>NIM Pemilih</th>
+								<th>NPM Pemilih</th>
 								<th>Nama Pemilih</th>
-                <th>Fakultas Pemilih</th>
+                <th>Jurusan Pemilih</th>
 								<th>Waktu Memilih</th>
 							</tr>
               <?php
@@ -38,9 +38,9 @@
               ?>
 							<tr>
 								<td><?= $i++ ?></td>
-								<td><?= $pemilih->nim_pemilih ?></td>
+								<td><?= $pemilih->npm_pemilih ?></td>
 								<td><?= $pemilih->nama_pemilih ?></td>
-								<td class="fakultas"><?= $pemilih->nama_fakultas ?></td>
+								<td class="jurusan"><?= $pemilih->nama_jurusan ?></td>
 								<td><?= $pemilih->waktu_memilih ?></td>
 							</tr>
             <?php endforeach ?>

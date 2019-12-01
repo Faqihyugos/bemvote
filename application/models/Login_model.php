@@ -22,8 +22,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     // Nilai bawaan form login
     public function loginDefaultValues(){
       return [
-        'tgl_lahir' => '',
         'npm' => '',
+        'tgl_lahir' => '',
         'username' => '',
         'password' => ''
       ];

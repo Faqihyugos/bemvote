@@ -169,23 +169,18 @@
                     <?= form_input('npm_pemilih', $input->npm_pemilih, ['class' => 'form-control', 'placeholder' => '10411111']) ?>
 									</div>
 								</div>
-                <!-- Name input-->
-				<div class="form-group">
-									<label class="col-md-3 control-label" for="name">Tanggal lahir Pemilih</label>
+				<!-- Name input-->
+								<div class="form-group">
+									<label class="col-md-3 control-label" for="name">tanggal lahir Pemilih</label>
 									<div class="col-md-9">
-										<div class="input-group date" data-provide="datepicker">
-											<input type="text" class="form-control">
-											<div class="input-group-addon">
-												<span class="glyphicon glyphicon-th"></span>
-											</div>
-										</div>
+                    <?= form_input('tgllahir', $input->tgl_lahir, ['class' => 'form-control', 'placeholder' => '01-12-1999	']) ?>
 									</div>
 								</div>
                 <!-- Name input-->
 								<div class="form-group">
 									<label class="col-md-3 control-label" for="name">Jurusan Pemilih</label>
 									<div class="col-md-9">
-                    <select class="form-control" name="id_fakultas">
+                    <select class="form-control" name="id_jurusan">
                     <?php foreach($jurusans as $jurusan): ?>
                       <option value="<?= $jurusan->id_jurusan ?>"><?= $jurusan->nama_jurusan ?></option>
                     <?php endforeach ?>

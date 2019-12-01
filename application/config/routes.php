@@ -22,7 +22,6 @@ $route['pemilih'] = 'pemilih/index';
 $route['pemilih-admin'] = 'pemilih/pemilihadmin';
 $route['pemilih/post'] = 'pemilih/store';
 $route['pemilih/delete'] = 'pemilih/destroy';
-$route['pemilih/gentoken'] = 'pemilih/gentoken';
 $route['pemilih/(:num)'] = 'pemilih/index/$1';
 $route['pemilih-admin/(:num)'] = 'pemilih/pemilihadmin/$1';
 

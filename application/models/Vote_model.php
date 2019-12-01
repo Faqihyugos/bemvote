@@ -24,14 +24,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       return $this->db->query($sql);
     }
 
+
     // Data Paslon Satu
     public function getPaslonSatu(){
-      return $this->db->select('*')->from('paslon')->where('id_paslon', '3')->get()->row();
+      return $this->db->select('*')->from('paslon')->where('id_paslon', '1')->get()->row();
     }
-
+   
     // Data Paslon Dua
     public function getPaslonDua(){
-      return $this->db->select('*')->from('paslon')->where('id_paslon', '4')->get()->row();
+      return $this->db->select('*')->from('paslon')->where('id_paslon', '2')->get()->row();
     }
 
     // Data Suatu Pemilih
@@ -62,7 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     // Total Suara Masuk Paslon Satu
     public function totalSuaraMasukSatu(){
-      return $this->db->select('*')->from('pemilihan')->join('pemilih', 'pemilihan.id_pemilih = pemilih.id_pemilih')->where('pemilihan.id_paslon', '3')->get()->num_rows();
+      return $this->db->select('*')->from('pemilihan')->join('pemilih', 'pemilihan.id_pemilih = pemilih.id_pemilih')->where('pemilihan.id_paslon', '1')->get()->num_rows();
     }
 
     // Paslon Dua
@@ -75,7 +76,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     // Total Suara Masuk Paslon Dua
     public function totalSuaraMasukDua(){
-      return $this->db->select('*')->from('pemilihan')->join('pemilih', 'pemilihan.id_pemilih = pemilih.id_pemilih')->where('pemilihan.id_paslon', '4')->get()->num_rows();
+      return $this->db->select('*')->from('pemilihan')->join('pemilih', 'pemilihan.id_pemilih = pemilih.id_pemilih')->where('pemilihan.id_paslon', '2')->get()->num_rows();
     }
 
     // Statistik Total Suara Masuk Semua jurusan
@@ -130,7 +131,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     // Total Suara Masuk Paslon Satu
     public function totalSuaraMasukSatuJurusan($jurusan){
-      return $this->db->select('*')->from('pemilihan')->join('pemilih', 'pemilihan.id_pemilih = pemilih.id_pemilih')->join('jurusan', 'pemilih.id_jurusan = jurusan.id_jurusan')->where('pemilihan.id_paslon', '3')->where('nama_jurusan', $jurusan)->get()->num_rows();
+      return $this->db->select('*')->from('pemilihan')->join('pemilih', 'pemilihan.id_pemilih = pemilih.id_pemilih')->join('jurusan', 'pemilih.id_jurusan = jurusan.id_jurusan')->where('pemilihan.id_paslon', '1')->where('nama_jurusan', $jurusan)->get()->num_rows();
     }
 
     // Paslon Dua
@@ -143,7 +144,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     // Total Suara Masuk Paslon Dua jurusan
     public function totalSuaraMasukDuaJurusan($jurusan){
-      return $this->db->select('*')->from('pemilihan')->join('pemilih', 'pemilihan.id_pemilih = pemilih.id_pemilih')->join('jurusan', 'pemilih.id_jurusan = jurusan.id_jurusan')->where('pemilihan.id_paslon', '4')->where('nama_jurusan', $jurusan)->get()->num_rows();
+      return $this->db->select('*')->from('pemilihan')->join('pemilih', 'pemilihan.id_pemilih = pemilih.id_pemilih')->join('jurusan', 'pemilih.id_jurusan = jurusan.id_jurusan')->where('pemilihan.id_paslon', '2')->where('nama_jurusan', $jurusan)->get()->num_rows();
     }
 
     // Semua jurusan

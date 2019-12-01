@@ -22,7 +22,7 @@
 						<div class="row no-padding">
 							<div class="large"><?= $paslonSatu->nomor_urut ?></div>
 							<h2><?= $paslonSatu->nama_paslon ?></h2>
-							<h4><strong><?= $paslonSatu->fakultas_koalisi ?></strong></h4>
+							<h4><strong><?= $paslonSatu->jurusan_koalisi ?></strong></h4>
               <div class="panel-body easypiechart-panel">
     						<div class="easypiechart" id="easypiechart-orange" data-percent="<?= $totalSuaraMasukSatuStat ?>" ><span class="percent"><?= $totalSuaraMasukSatuStat ?>%</span></div>
     					</div>
@@ -36,7 +36,7 @@
 						<div class="row no-padding">
 							<div class="large"><?= $paslonDua->nomor_urut ?></div>
 							<h2><?= $paslonDua->nama_paslon ?></h2>
-							<h4><strong><?= $paslonDua->fakultas_koalisi ?></strong></h4>
+							<h4><strong><?= $paslonDua->jurusan_koalisi ?></strong></h4>
               <div class="panel-body easypiechart-panel">
     						<div class="easypiechart" id="easypiechart-teal" data-percent="<?= $totalSuaraMasukDuaStat ?>" ><span class="percent"><?= $totalSuaraMasukDuaStat ?>%</span></div>
     					</div>

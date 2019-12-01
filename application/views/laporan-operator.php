@@ -33,10 +33,10 @@
   </head>
   <body>
     <div class="container">
-      <h1>Laporan BEM-VOTE Fakultas <?= $fakultas ?></h1>
+      <h1>Laporan BEM-VOTE jurusan <?= $jurusan ?></h1>
       <br><br><br>
 
-      <h4>Live Count Fakultas <?= $fakultas ?></h4>
+      <h4>Live Count jurusan <?= $jurusan ?></h4>
       <table style="width:750px;
       margin: 0 auto;">
         <tr>
@@ -46,13 +46,13 @@
         </tr>
         <tr>
           <td><?= $paslonSatu->nama_paslon ?></td>
-          <td><?= $totalSuaraMasukSatuFakultasStat ?></td>
-          <td><?= $totalSuaraMasukSatuFakultas ?></td>
+          <td><?= $totalSuaraMasukSatujurusanStat ?></td>
+          <td><?= $totalSuaraMasukSatujurusan ?></td>
         </tr>
         <tr>
           <td><?= $paslonDua->nama_paslon ?></td>
-          <td><?= $totalSuaraMasukDuaFakultasStat ?></td>
-          <td><?= $totalSuaraMasukDuaFakultas ?></td>
+          <td><?= $totalSuaraMasukDuajurusanStat ?></td>
+          <td><?= $totalSuaraMasukDuajurusan ?></td>
         </tr>
       </table>
 

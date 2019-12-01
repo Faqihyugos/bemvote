@@ -11,9 +11,9 @@ class Laporan extends CI_Controller{
   public function index(){
 
     if($this->session->has_userdata('operator')) redirect('');
-    if($this->session->has_userdata('dekan')) redirect('');
-    if($this->session->has_userdata('rektor')) redirect('');
-    if($this->session->has_userdata('nim')) redirect('');
+    if($this->session->has_userdata('dosen')) redirect('');
+    if($this->session->has_userdata('wakil ketua III')) redirect('');
+    if($this->session->has_userdata('npm')) redirect('');
 
     $this->load->model('Vote_model', 'vote', TRUE);
     $this->load->model('Pemilih_model', 'pemilih', TRUE);
@@ -34,57 +34,27 @@ class Laporan extends CI_Controller{
     $totalTidakMemilih = $this->vote->totalTidakMemilih();
     $totalSuaraMasukStat = $this->vote->totalSuaraMasukStat();
 
-    $totalPemilihTeknik = $this->vote->totalPemilihTeknik();
-    $totalSuaraMasukTeknik = $this->vote->totalSuaraMasukTeknik();
-    $totalTidakMemilihTeknik = $this->vote->totalTidakMemilihTeknik();
-    $totalSuaraMasukTeknikStat = $this->vote->totalSuaraMasukTeknikStat();
+    $totalPemilihSI = $this->vote->totalPemilihSI();
+    $totalSuaraMasukSI = $this->vote->totalSuaraMasukSI();
+    $totalTidakMemilihSI = $this->vote->totalTidakMemilihSI();
+    $totalSuaraMasukSIStat = $this->vote->totalSuaraMasukSIStat();
 
-    $totalPemilihFIP = $this->vote->totalPemilihFIP();
-    $totalSuaraMasukFIP = $this->vote->totalSuaraMasukFIP();
-    $totalTidakMemilihFIP = $this->vote->totalTidakMemilihFIP();
-    $totalSuaraMasukFIPStat = $this->vote->totalSuaraMasukFIPStat();
+    $totalPemilihSK = $this->vote->totalPemilihSK();
+    $totalSuaraMasukSK = $this->vote->totalSuaraMasukSK();
+    $totalTidakMemilihSK = $this->vote->totalTidakMemilihSK();
+    $totalSuaraMasukSKStat = $this->vote->totalSuaraMasukSKStat();
 
-    $totalPemilihMIPA = $this->vote->totalPemilihMIPA();
-    $totalSuaraMasukMIPA = $this->vote->totalSuaraMasukMIPA();
-    $totalTidakMemilihMIPA = $this->vote->totalTidakMemilihMIPA();
-    $totalSuaraMasukMIPAStat = $this->vote->totalSuaraMasukMIPAStat();
+    $totalPemilihMI = $this->vote->totalPemilihMI();
+    $totalSuaraMasukMI = $this->vote->totalSuaraMasukMI();
+    $totalTidakMemilihMI = $this->vote->totalTidakMemilihMI();
+    $totalSuaraMasukMIStat = $this->vote->totalSuaraMasukMIStat();
 
-    $totalPemilihEkonomi = $this->vote->totalPemilihEkonomi();
-    $totalSuaraMasukEkonomi = $this->vote->totalSuaraMasukEkonomi();
-    $totalTidakMemilihEkonomi = $this->vote->totalTidakMemilihEkonomi();
-    $totalSuaraMasukEkonomiStat = $this->vote->totalSuaraMasukEkonomiStat();
-
-    $totalPemilihFOK = $this->vote->totalPemilihFOK();
-    $totalSuaraMasukFOK = $this->vote->totalSuaraMasukFOK();
-    $totalTidakMemilihFOK = $this->vote->totalTidakMemilihFOK();
-    $totalSuaraMasukFOKStat = $this->vote->totalSuaraMasukFOKStat();
-
-    $totalPemilihFIS = $this->vote->totalPemilihFIS();
-    $totalSuaraMasukFIS = $this->vote->totalSuaraMasukFIS();
-    $totalTidakMemilihFIS = $this->vote->totalTidakMemilihFIS();
-    $totalSuaraMasukFISStat = $this->vote->totalSuaraMasukFISStat();
-
-    $totalPemilihFIK = $this->vote->totalPemilihFIK();
-    $totalSuaraMasukFIK = $this->vote->totalSuaraMasukFIK();
-    $totalTidakMemilihFIK = $this->vote->totalTidakMemilihFIK();
-    $totalSuaraMasukFIKStat = $this->vote->totalSuaraMasukFIKStat();
-
-    $totalPemilihFaperta = $this->vote->totalPemilihFaperta();
-    $totalSuaraMasukFaperta = $this->vote->totalSuaraMasukFaperta();
-    $totalTidakMemilihFaperta = $this->vote->totalTidakMemilihFaperta();
-    $totalSuaraMasukFapertaStat = $this->vote->totalSuaraMasukFapertaStat();
-
-    $totalPemilihHukum = $this->vote->totalPemilihHukum();
-    $totalSuaraMasukHukum = $this->vote->totalSuaraMasukHukum();
-    $totalTidakMemilihHukum = $this->vote->totalTidakMemilihHukum();
-    $totalSuaraMasukHukumStat = $this->vote->totalSuaraMasukHukumStat();
-
-    $totalPemilihFSB = $this->vote->totalPemilihFSB();
-    $totalSuaraMasukFSB = $this->vote->totalSuaraMasukFSB();
-    $totalTidakMemilihFSB = $this->vote->totalTidakMemilihFSB();
-    $totalSuaraMasukFSBStat = $this->vote->totalSuaraMasukFSBStat();
-
-    $html = $this->load->view('laporan', compact('paslonSatu', 'paslonDua', 'totalPemilih', 'totalSuaraMasuk', 'totalTidakMemilih', 'totalSuaraMasukStat', 'totalSuaraMasukDuaStat', 'totalSuaraMasukDua', 'totalSuaraMasukSatuStat', 'totalSuaraMasukSatu', 'paslons', 'totalSuaraMasukFSBStat', 'totalTidakMemilihFSB', 'totalSuaraMasukFSB', 'totalPemilihFSB', 'totalPemilihHukum', 'totalSuaraMasukHukum', 'totalTidakMemilihHukum', 'totalSuaraMasukHukumStat', 'totalPemilihFaperta', 'totalSuaraMasukFaperta', 'totalTidakMemilihFaperta', 'totalSuaraMasukFapertaStat', 'totalPemilihFIK', 'totalSuaraMasukFIK', 'totalTidakMemilihFIK', 'totalSuaraMasukFIKStat', 'totalPemilihFIS', 'totalSuaraMasukFIS', 'totalTidakMemilihFIS', 'totalSuaraMasukFISStat', 'totalPemilihFOK', 'totalSuaraMasukFOK', 'totalTidakMemilihFOK', 'totalSuaraMasukFOKStat', 'totalPemilihEkonomi', 'totalSuaraMasukEkonomi', 'totalTidakMemilihEkonomi', 'totalSuaraMasukEkonomiStat', 'totalPemilihMIPA', 'totalSuaraMasukMIPA', 'totalTidakMemilihMIPA', 'totalSuaraMasukMIPAStat', 'totalPemilihFIP', 'totalSuaraMasukFIP', 'totalTidakMemilihFIP', 'totalSuaraMasukFIPStat', 'totalPemilihTeknik', 'totalSuaraMasukTeknik', 'totalTidakMemilihTeknik', 'totalSuaraMasukTeknikStat'), true);
+    $html = $this->load->view('laporan', compact('paslonSatu', 'paslonDua', 'totalPemilih', 'totalSuaraMasuk',
+     'totalTidakMemilih', 'totalSuaraMasukStat', 'totalSuaraMasukDuaStat', 'totalSuaraMasukDua',
+      'totalSuaraMasukSatuStat', 'totalSuaraMasukSatu', 'paslons',
+       'totalSuaraMasukSIStat', 'totalTidakMemilihSI', 'totalSuaraMasukSI', 'totalPemilihSI',
+        'totalPemilihSK', 'totalSuaraMasukSK', 'totalTidakMemilihSK', 'totalSuaraMasukSKStat',
+         'totalPemilihMI', 'totalSuaraMasukMI', 'totalTidakMemilihMI', 'totalSuaraMasukMIStat'), true);
 
     $pdf = new DOMPDF();
     $pdf->load_html($html);
@@ -96,24 +66,24 @@ class Laporan extends CI_Controller{
 
   public function operator(){
     if($this->session->has_userdata('admin')) redirect('');
-    if($this->session->has_userdata('dekan')) redirect('');
-    if($this->session->has_userdata('rektor')) redirect('');
-    if($this->session->has_userdata('nim')) redirect('');
+    if($this->session->has_userdata('dosen')) redirect('');
+    if($this->session->has_userdata('wakil ketua III')) redirect('');
+    if($this->session->has_userdata('npm')) redirect('');
 
     $this->load->model('Vote_model', 'vote', true);
 
-    $fakultas = $this->session->userdata('fakultas');
+    $jurusan = $this->session->userdata('jurusan');
 
     $paslonSatu = $this->vote->getPaslonSatu();
     $paslonDua = $this->vote->getPaslonDua();
 
-    $totalSuaraMasukSatuFakultasStat = $this->vote->totalSuaraMasukSatuFakultasStat($fakultas);
-    $totalSuaraMasukSatuFakultas = $this->vote->totalSuaraMasukSatuFakultas($fakultas);
+    $totalSuaraMasukSatuJurusanStat = $this->vote->totalSuaraMasukSatuJurusanStat($jurusan);
+    $totalSuaraMasukSatuJurusan = $this->vote->totalSuaraMasukSatuJurusan($jurusan);
 
-    $totalSuaraMasukDuaFakultasStat = $this->vote->totalSuaraMasukDuaFakultasStat($fakultas);
-    $totalSuaraMasukDuaFakultas = $this->vote->totalSuaraMasukDuaFakultas($fakultas);
+    $totalSuaraMasukDuaJurusanStat = $this->vote->totalSuaraMasukDuaJurusanStat($jurusan);
+    $totalSuaraMasukDuaJurusan = $this->vote->totalSuaraMasukDuaJurusan($jurusan);
 
-    $html = $this->load->view('laporan-operator', compact('fakultas', 'paslonSatu', 'paslonDua', 'totalSuaraMasukSatuFakultasStat', 'totalSuaraMasukSatuFakultas', 'totalSuaraMasukDuaFakultasStat', 'totalSuaraMasukDuaFakultas'), true);
+    $html = $this->load->view('laporan-operator', compact('jurusan', 'paslonSatu', 'paslonDua', 'totalSuaraMasukSatuJurusanStat', 'totalSuaraMasukSatuJurusan', 'totalSuaraMasukDuaJurusanStat', 'totalSuaraMasukDuaJurusan'), true);
 
     $pdf = new DOMPDF();
     $pdf->load_html($html);

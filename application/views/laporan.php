@@ -43,14 +43,14 @@
         <tr>
           <th>Nama Koalisi</th>
           <th>Nama Paslon</th>
-          <th>Fakultas Koalisi</th>
+          <th>Jurusan Koalisi</th>
           <th>Nomor Urut</th>
         </tr>
         <?php foreach($paslons as $paslon): ?>
         <tr>
           <td><?= $paslon->nama_koalisi ?></td>
           <td><?= $paslon->nama_paslon ?></td>
-          <td><?= $paslon->fakultas_koalisi ?></td>
+          <td><?= $paslon->Jurusan_koalisi ?></td>
           <td><?= $paslon->nomor_urut ?></td>
         </tr>
       <?php endforeach ?>
@@ -96,85 +96,36 @@
       </table>
 
       <br><br>
-      <h4>Statistik Pemilih Tiap Fakultas</h4>
+      <h4>Statistik Pemilih Tiap Jurusan</h4>
       <table style="width:750px;
       margin: 0 auto;">
         <tr>
-          <th>Fakultas</th>
+          <th>Jurusan</th>
           <th>Total Pemilih (Orang)</th>
           <th>Total Suara Masuk (Orang)</th>
           <th>Total Tidak Memilih (Orang)</th>
           <th>Presentasi Suara Masuk (%)</th>
         </tr>
         <tr>
-          <td>Sastra & Budaya</td>
-          <td><?= $totalPemilihFSB ?></td>
-          <td><?= $totalSuaraMasukFSB ?></td>
-          <td><?= $totalTidakMemilihFSB ?></td>
-          <td><?= $totalSuaraMasukFSBStat ?></td>
+          <td>Sistem Informasi</td>
+          <td><?= $totalPemilihSI ?></td>
+          <td><?= $totalSuaraMasukSI ?></td>
+          <td><?= $totalTidakMemilihSI ?></td>
+          <td><?= $totalSuaraMasukSIStat ?></td>
         </tr>
         <tr>
-          <td>Hukum</td>
-          <td><?= $totalPemilihHukum ?></td>
-          <td><?= $totalSuaraMasukHukum ?></td>
-          <td><?= $totalTidakMemilihHukum ?></td>
-          <td><?= $totalSuaraMasukHukumStat ?></td>
+          <td>Sistem Komputer</td>
+          <td><?= $totalPemilihSK ?></td>
+          <td><?= $totalSuaraMasukSK ?></td>
+          <td><?= $totalTidakMemilihSK ?></td>
+          <td><?= $totalSuaraMasukSKStat ?></td>
         </tr>
         <tr>
-          <td>Pertanian</td>
-          <td><?= $totalPemilihFaperta ?></td>
-          <td><?= $totalSuaraMasukFaperta ?></td>
-          <td><?= $totalTidakMemilihFaperta ?></td>
-          <td><?= $totalSuaraMasukFapertaStat ?></td>
-        </tr>
-        <tr>
-          <td>Ilmu Kelautan</td>
-          <td><?= $totalPemilihFIK ?></td>
-          <td><?= $totalSuaraMasukFIK ?></td>
-          <td><?= $totalTidakMemilihFIK ?></td>
-          <td><?= $totalSuaraMasukFIKStat ?></td>
-        </tr>
-        <tr>
-          <td>Ilmu Sosial</td>
-          <td><?= $totalPemilihFIS ?></td>
-          <td><?= $totalSuaraMasukFIS ?></td>
-          <td><?= $totalTidakMemilihFIS ?></td>
-          <td><?= $totalSuaraMasukFISStat ?></td>
-        </tr>
-        <tr>
-          <td>Olahraga & Kesehatan</td>
-          <td><?= $totalPemilihFOK ?></td>
-          <td><?= $totalSuaraMasukFOK ?></td>
-          <td><?= $totalTidakMemilihFOK ?></td>
-          <td><?= $totalSuaraMasukFOKStat ?></td>
-        </tr>
-        <tr>
-          <td>Ekonomi</td>
-          <td><?= $totalPemilihEkonomi ?></td>
-          <td><?= $totalSuaraMasukEkonomi ?></td>
-          <td><?= $totalTidakMemilihEkonomi ?></td>
-          <td><?= $totalSuaraMasukEkonomiStat ?></td>
-        </tr>
-        <tr>
-          <td>MIPA</td>
-          <td><?= $totalPemilihMIPA ?></td>
-          <td><?= $totalSuaraMasukMIPA ?></td>
-          <td><?= $totalTidakMemilihMIPA ?></td>
-          <td><?= $totalSuaraMasukMIPAStat ?></td>
-        </tr>
-        <tr>
-          <td>Ilmu Pendidikan</td>
-          <td><?= $totalPemilihFIP ?></td>
-          <td><?= $totalSuaraMasukFIP ?></td>
-          <td><?= $totalTidakMemilihFIP ?></td>
-          <td><?= $totalSuaraMasukFIPStat ?></td>
-        </tr>
-        <tr>
-          <td>Teknik</td>
-          <td><?= $totalPemilihTeknik ?></td>
-          <td><?= $totalSuaraMasukTeknik ?></td>
-          <td><?= $totalTidakMemilihTeknik ?></td>
-          <td><?= $totalSuaraMasukTeknikStat ?></td>
+          <td>Manajemen Informasi</td>
+          <td><?= $totalPemilihMI ?></td>
+          <td><?= $totalSuaraMasukMI ?></td>
+          <td><?= $totalTidakMemilihMI ?></td>
+          <td><?= $totalSuaraMasukMIStat ?></td>
         </tr>
       </table>
     </div>

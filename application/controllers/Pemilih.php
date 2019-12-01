@@ -66,7 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $pagination = $this->pagination->create_links();
 
       $main_view = 'bem/pemilih';
-      $this->load->view('template', compact('main_view', 'pemilihs', 'input', 'jurusans', 'belumMemilihs', 'pemilihFakultass', 'jumlahPemilih', 'jumlahBelumPemilih', 'pagination'));
+      $this->load->view('template', compact('main_view', 'pemilihs', 'input', 'jurusans', 'belumMemilihs', 'pemilihJurusans', 'jumlahPemilih', 'jumlahBelumPemilih', 'pagination'));
     }
 
     // Halaman Pemilih untuk Admin, Dekan, Rektor
@@ -124,7 +124,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $pemilihs = $this->pemilih->allPemilih();
         $jurusans = $this->pemilih->allJurusan();
         $main_view = "bem/pemilih";
-        $this->load->view('template', compact('main_view', 'jurusans', 'input', 'pemilihs', 'pemilihFakultass', 'belumMemilihs'));
+        $this->load->view('template', compact('main_view', 'jurusans', 'input', 'pemilihs', 'pemilihJurusans', 'belumMemilihs'));
         return;
       }
       $this->pemilih->insertPemilih($input);

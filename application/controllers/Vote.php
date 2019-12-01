@@ -75,7 +75,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     }
 
     // Fitur Statistik Pemilihan Berdasarkan Fakultas
-    public function statfakultas(){
+    public function statjurusan(){
       if($this->session->has_userdata('npm')) redirect('');
       if($this->session->has_userdata('admin')) redirect('');
       if($this->session->has_userdata('wakil ketua III')) redirect('');
@@ -87,14 +87,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $totalTidakMemilihJurusan = $this->vote->totalTidakMemilihJurusan($jurusan);
       $totalSuaraMasukJurusanStat = $this->vote->totalSuaraMasukJurusanStat($jurusan);
 
-      $main_view = 'bem/statistik-fakultas';
+      $main_view = 'bem/statistik-jurusan';
       $this->load->view('template', compact('main_view',
       'totalSuaraMasukJurusanStat', 'totalTidakMemilihJurusan', 'totalSuaraMasukJurusan', 'totalPemilihJurusan'));
     }
 
     // Fitur Live Count
     public function livecount(){
-      if($this->session->has_userdata('nim')) redirect('');
+      if($this->session->has_userdata('npm')) redirect('');
 
       $paslonSatu = $this->vote->getPaslonSatu();
       $paslonDua = $this->vote->getPaslonDua();
