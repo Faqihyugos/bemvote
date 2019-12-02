@@ -6,7 +6,7 @@
 
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						Pemilih Dengan NIM : <strong><?= $nim ?></strong>
+						Pemilih Dengan NPM : <strong><?= $npm ?></strong>
 						Dengan Nama : <strong><?= $nama ?></strong>
 						<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span>
 					</div>
@@ -16,12 +16,10 @@
 						<table class="table">
 							<tr>
 								<th>No</th>
-								<th>NIM Pemilih</th>
+								<th>NPM Pemilih</th>
 								<th>Nama Pemilih</th>
-								<th>Status Pemilih</th>
 								<th>Telah Pemilih</th>
 								<th>Terakhir Login</th>
-                <th>Token</th>
 							</tr>
               <?php
                 $i = 1;
@@ -29,15 +27,8 @@
               ?>
 							<tr>
 								<td><?= $i++ ?></td>
-								<td><?= $pemilih->nim_pemilih ?></td>
+								<td><?= $pemilih->npm_pemilih ?></td>
 								<td><?= $pemilih->nama_pemilih ?></td>
-								<td class="status">
-                <?php if($pemilih->status_pemilih === 'ya'): ?>
-                  <span class="fa fa-check"></span>
-                <?php else: ?>
-                  <span class="fa fa-times"></span>
-                <?php endif ?>
-                </td>
 								<td class="status">
                 <?php if($pemilih->telah_memilih === 'ya'): ?>
                   <span class="fa fa-check text-center"></span>
@@ -46,19 +37,6 @@
                 <?php endif ?>
                 </td>
 								<td><?= $pemilih->terakhir_login ?></td>
-                <td>
-                  <?php if($pemilih->token_pemilih): ?>
-                    <?= form_open('pemilih/looktoken') ?>
-                    <input type="hidden" name="token_pemilih" value="<?= $pemilih->token_pemilih ?>">
-                    <input type="submit" value="Lihat" class="btn btn-info pull-left" style="color:white;">
-                    <?= form_close() ?>
-                  <?php else: ?>
-                  <?= form_open('pemilih/gentoken') ?>
-                  <input type="hidden" name="id_pemilih" value="<?= $pemilih->id_pemilih ?>">
-                  <input type="submit" value="Generate" class="btn btn-info pull-left" style="color:white;">
-                  <?= form_close() ?>
-                  <?php endif ?>
-                </td>
 							</tr>
             <?php endforeach ?>
 						</table>

@@ -20,13 +20,13 @@
 			<div class="col-md-12">
         <div class="panel panel-default">
 					<div class="panel-heading">
-						Cari Pemilih <?= $this->session->userdata('fakultas') ?>
+						Cari Pemilih <?= $this->session->userdata('jurusan') ?>
 					</div>
 					<div class="panel-body">
               <?= form_open('pemilih/search', ['class' => 'form-inline', 'method' => 'get']) ?>
                 <div class="form-group">
-                  <label>NIM </label>
-                  <input type="text" class="form-control" name="nim" id="formNIM">
+                  <label>NPM </label>
+                  <input type="text" class="form-control" name="npm" id="formNPM">
                 </div>
                 <span>Dengan Nama &nbsp;</span>
                 <div class="form-group">
@@ -42,7 +42,7 @@
 
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						Daftar Semua Pemilih <?= $this->session->userdata('fakultas') ?>
+						Daftar Semua Pemilih <?= $this->session->userdata('jurusan') ?>
 						<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span>
 					</div>
 					<div class="panel-body timeline-container">
@@ -52,10 +52,8 @@
 								<th>No</th>
 								<th>NIM Pemilih</th>
 								<th>Nama Pemilih</th>
-								<th>Status Pemilih</th>
 								<th>Telah Pemilih</th>
 								<th>Terakhir Login</th>
-                <th>Token</th>
 							</tr>
               <?php
                 $i = 1;
@@ -66,13 +64,6 @@
 								<td><?= $pemilih->nim_pemilih ?></td>
 								<td><?= $pemilih->nama_pemilih ?></td>
 								<td class="status">
-                <?php if($pemilih->status_pemilih === 'ya'): ?>
-                  <span class="fa fa-check"></span>
-                <?php else: ?>
-                  <span class="fa fa-times"></span>
-                <?php endif ?>
-                </td>
-								<td class="status">
                 <?php if($pemilih->telah_memilih === 'ya'): ?>
                   <span class="fa fa-check"></span>
                 <?php else: ?>
@@ -80,19 +71,6 @@
                 <?php endif ?>
                 </td>
 								<td><?= $pemilih->terakhir_login ?></td>
-                <td>
-                  <?php if($pemilih->token_pemilih): ?>
-                    <?= form_open('pemilih/looktoken') ?>
-                    <input type="hidden" name="token_pemilih" value="<?= $pemilih->token_pemilih ?>">
-                    <input type="submit" value="Lihat" class="btn btn-info pull-left" style="color:white;">
-                    <?= form_close() ?>
-                  <?php else: ?>
-                  <?= form_open('pemilih/gentoken') ?>
-                  <input type="hidden" name="id_pemilih" value="<?= $pemilih->id_pemilih ?>">
-                  <input type="submit" value="Generate" class="btn btn-info pull-left" style="color:white;">
-                  <?= form_close() ?>
-                  <?php endif ?>
-                </td>
 							</tr>
             <?php endforeach ?>
 						</table>
@@ -120,7 +98,7 @@
 								<th>NIM Pemilih</th>
 								<th>Nama Pemilih</th>
 								<th>Terakhir Login</th>
-                <th>Token</th>
+    
 							</tr>
               <?php
                 $i = 1;
@@ -131,19 +109,6 @@
 								<td><?= $pemilih->nim_pemilih ?></td>
 								<td><?= $pemilih->nama_pemilih ?></td>
 								<td><?= $pemilih->terakhir_login ?></td>
-                  <td>
-                    <?php if($pemilih->token_pemilih): ?>
-                      <?= form_open('pemilih/looktoken') ?>
-                      <input type="hidden" name="token_pemilih" value="<?= $pemilih->token_pemilih ?>">
-                      <input type="submit" value="Lihat" class="btn btn-info pull-left" style="color:white;">
-                      <?= form_close() ?>
-                    <?php else: ?>
-                    <?= form_open('pemilih/gentoken') ?>
-                    <input type="hidden" name="id_pemilih" value="<?= $pemilih->id_pemilih ?>">
-                    <input type="submit" value="Generate" class="btn btn-info pull-left" style="color:white;">
-                    <?= form_close() ?>
-                    <?php endif ?>
-                  </td>
 							</tr>
             <?php endforeach ?>
 						</table>

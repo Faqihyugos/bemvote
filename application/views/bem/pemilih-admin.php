@@ -20,12 +20,12 @@
 			<div class="col-md-12">
         <div class="panel panel-default">
 					<div class="panel-heading">
-						Cari Pemilih <?= $this->session->userdata('fakultas') ?>
+						Cari Pemilih <?= $this->session->userdata('jurusan') ?>
 					</div>
 					<div class="panel-body">
               <?= form_open('pemilih/searchpemilihadmin', ['class' => 'form-inline', 'method' => 'get']) ?>
                 <div class="form-group">
-                  <label>NIM </label>
+                  <label>NPM </label>
                   <input type="text" class="form-control" name="npm" id="formNPMAdmin">
                 </div>
                 <span>Dengan Nama &nbsp;</span>
@@ -173,7 +173,7 @@
 								<div class="form-group">
 									<label class="col-md-3 control-label" for="name">tanggal lahir Pemilih</label>
 									<div class="col-md-9">
-                    <?= form_input('tgllahir', $input->tgl_lahir, ['class' => 'form-control', 'placeholder' => '01-12-1999	']) ?>
+                    <?= form_input('tgl_lahir', $input->tgl_lahir, ['class' => 'form-control', 'placeholder' => '01-12-1999	']) ?>
 									</div>
 								</div>
                 <!-- Name input-->
@@ -187,7 +187,6 @@
                     </select>
 									</div>
 								</div>
-
 								<!-- Form actions -->
 								<div class="form-group">
 									<div class="col-md-12 widget-right">

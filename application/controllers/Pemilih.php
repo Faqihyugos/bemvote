@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       // elseif($this->session->userdata('hak_akses') === 'operator-fik') $fakultas = 'Ilmu Kelautan';
       // elseif($this->session->userdata('hak_akses') === 'operator-mipa') $fakultas = 'MIPA';
 
-      $perPage = 25;
+      $perPage = 10;
       if($page === null) $offset = 0;
       else $offset = ($page * $perPage) - $perPage;
 
@@ -71,9 +71,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     // Halaman Pemilih untuk Admin, Dekan, Rektor
     public function pemilihadmin($page = null){
-      if($this->session->has_userdata('operator')) redirect('');
+      if($this->session->has_userdata('panitia')) redirect('');
 
-      $perPage = 25;
+      $perPage = 10;
       if($page === null) $offset = 0;
       else $offset = ($page * $perPage) - $perPage;
 
@@ -127,9 +127,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $this->load->view('template', compact('main_view', 'jurusans', 'input', 'pemilihs', 'pemilihJurusans', 'belumMemilihs'));
         return;
       }
+      $pemilih->telah_memilih === 'tidak';
       $this->pemilih->insertPemilih($input);
       $this->session->set_flashdata('msg', 'Pemilih Berhasil Di Tambahkan!');
-      redirect('pemilih');
+      redirect('pemilih-admin');
     }
 
     // Hapus Pemilih
@@ -139,7 +140,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $id = $this->input->post('id_pemilih', TRUE);
       if($this->pemilih->deletePemilih($id)){
         $this->session->set_flashdata('msg', 'Pemilih Berhasil Di Hapus!');
-        redirect('pemilih');
+        redirect('pemilih-admin');
       }
     }
 

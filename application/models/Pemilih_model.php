@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       return [
         'nama_pemilih' => '',
         'npm_pemilih' => '',
-        'tgl_lahir' => ''
+        'tgl_lahir' => '',
       ];
     }
 
@@ -77,11 +77,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           'field' => 'npm_pemilih',
           'label' => 'NPM Pemilih',
           'rules' => 'trim|required'
-        ],        [
+        ],
+        [
           'field' => 'tgl_lahir',
           'label' => 'tgl_lahir',
           'rules' => 'trim|required'
-        ],
+        ]
       ];
       $this->form_validation->set_rules($rules);
       $this->form_validation->set_error_delimiters('<div class="text-center mb-3" style="color:red; border:1px solid red; padding:5px">', '</div>');

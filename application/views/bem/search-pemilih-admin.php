@@ -20,7 +20,7 @@
 			<div class="col-md-12">
         <div class="panel panel-default">
 					<div class="panel-heading">
-            Cari Pemilih Semua Fakultas
+            Cari Pemilih Semua Jurusan
 					</div>
 					<div class="panel-body">
               <?= form_open('pemilih/searchpemilihadmin', ['class' => 'form-inline', 'method' => 'get']) ?>
