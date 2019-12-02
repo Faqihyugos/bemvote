@@ -66,7 +66,7 @@
 								<div class="form-group">
 									<label class="col-md-3 control-label" for="name">Nama Admin</label>
 									<div class="col-md-9">
-                    <?= form_input('nama_admin', $input->nama_admin, ['class' => 'form-control', 'placeholder' => 'Ir. Soekarno']) ?>
+                    <?= form_input('nama_admin', $input->nama_admin, ['class' => 'form-control', 'placeholder' => 'Nama']) ?>
 									</div>
 								</div>
 
@@ -74,7 +74,7 @@
 								<div class="form-group">
 									<label class="col-md-3 control-label" for="name">Username Admin</label>
 									<div class="col-md-9">
-                    <?= form_input('user_admin', $input->user_admin, ['class' => 'form-control', 'placeholder' => 'soekarno17']) ?>
+                    <?= form_input('user_admin', $input->user_admin, ['class' => 'form-control', 'placeholder' => 'Username']) ?>
 									</div>
 								</div>
 
@@ -91,18 +91,6 @@
 									<label class="col-md-3 control-label" for="name">Hak Akses</label>
 									<div class="col-md-9">
                     <select class="form-control" name="hak_akses">
-                      <!-- <option value="operator-teknik">Operator TEKNIK</option>
-                      <option value="operator-fekon">Operator FEKON</option>
-                      <option value="operator-fok">Operator FOK</option>
-                      <option value="operator-mipa">Operator MIPA</option>
-                      <option value="operator-fis">Operator FIS</option>
-                      <option value="operator-fip">Operator FIP</option>
-                      <option value="operator-pertanian">Operator PERTANIAN</option>
-                      <option value="operator-fsb">Operator FSB</option>
-					  <option value="operator-fik">Operator FIK</option> -->
-					  'admin','panitia-validasi','wakil ketua III','dosen','panitia-pengawas'
-					  <option value="panitia-validasi">Panitia Validasi</option>
-					  <option value="panitia-pengawas">Panitia Pengawas</option>
                       <option value="dosen">Dosen</option>
                       <option value="wakil ketua III">Wakil ketua III</option>
                       <option value="admin">Admin</option>

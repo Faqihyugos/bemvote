@@ -22,12 +22,12 @@
 		// Search AJAX untuk Operator
     function cariPemilihAJAX(e){
 				// e.preventDefault();
-        var nim = $("#formNIM").val();
+        var npm = $("#formNPM").val();
         var nama = $("#formNama").val();
         $.ajax({
 						type: "GET",
             url: "<?= base_url('pemilih/searchajax') ?>",
-            data: 'nim='+nim+"&nama="+nama,
+            data: 'npm='+npm+"&nama="+nama,
             cache: false,
             success: function(data){
                 $("#pageAJAX").html(data);
@@ -49,12 +49,12 @@
 		// Search AJAX untuk Admin, Dekan & Rektor
     function cariPemilihByAdminAJAX(e){
 				// e.preventDefault();
-        var nim = $("#formNIMAdmin").val();
+        var npm = $("#formNPMAdmin").val();
         var nama = $("#formNamaAdmin").val();
         $.ajax({
 						type: "GET",
             url: "<?= base_url('pemilih/searchadminajax') ?>",
-            data: 'nim='+nim+"&nama="+nama,
+            data: 'npm='+npm+"&nama="+nama,
             cache: false,
             success: function(data){
                 $("#pageAJAX").html(data);
@@ -62,7 +62,7 @@
         })
     }
 
-    $("#formNIMAdmin").keyup(function(){
+    $("#formNPMAdmin").keyup(function(){
 			delay(function(){
 				cariPemilihByAdminAJAX();
 			}, 1000);

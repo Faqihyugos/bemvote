@@ -45,13 +45,10 @@
 		<div class="divider"></div>
 		<ul class="nav menu">
 			<li><a href="<?= base_url('') ?>"><em class="fa fa-dashboard">&nbsp;</em> Home</a></li>
-			<?php if(!empty($this->session->userdata('rektor')) || !empty($this->session->userdata('dekan')) || !empty($this->session->userdata('operator')) || !empty($this->session->userdata('admin'))): ?>
+			<?php if(!empty($this->session->userdata('dosen')) || !empty($this->session->userdata('wakil ketua III')) || !empty($this->session->userdata('admin'))): ?>
 				<li><a href="<?= base_url('paslon') ?>"><em class="fa fa-user">&nbsp;</em> Paslon</a></li>
 			<?php endif ?>
-			<?php if(!empty($this->session->userdata('operator'))): ?>
-				<li><a href="<?= base_url('pemilih') ?>"><em class="fa fa-users">&nbsp;</em> Pemilih</a></li>
-			<?php endif ?>
-			<?php if(!empty($this->session->userdata('rektor')) || !empty($this->session->userdata('dekan')) || !empty($this->session->userdata('admin'))): ?>
+			<?php if(!empty($this->session->userdata('dosen')) || !empty($this->session->userdata('wakil ketua III')) || !empty($this->session->userdata('admin'))): ?>
 				<li><a href="<?= base_url('pemilih-admin') ?>"><em class="fa fa-users">&nbsp;</em> Pemilih</a></li>
 			<?php endif ?>
 			<?php if(!empty($this->session->userdata('admin'))): ?>
@@ -59,14 +56,10 @@
 				<li><a href="<?= base_url('admin') ?>"><em class="fa fa-eye">&nbsp;</em> Admin</a></li>
 				<li><a href="<?= base_url('suara-masuk') ?>"><em class="fa fa-comment">&nbsp;</em> Suara Masuk</a></li>
 			<?php endif ?>
-			<?php if(!empty($this->session->userdata('rektor')) || !empty($this->session->userdata('dekan')) || !empty($this->session->userdata('admin'))): ?>
+			<?php if(!empty($this->session->userdata('wakil ketua III')) || !empty($this->session->userdata('dosen')) || !empty($this->session->userdata('admin'))): ?>
 			<li><a href="<?= base_url('statistik-pemilih') ?>"><em class="fa fa-bar-chart">&nbsp;</em> Statistik Pemilih</a></li>
 			<?php endif ?>
-			<?php if(!empty($this->session->userdata('operator'))): ?>
-			<li><a href="<?= base_url('statistik-jurusan/'.$this->session->userdata('slug_jurusan')); ?>"><em class="fa fa-bar-chart">&nbsp;</em> Statistik Jurusan</a></li>
-			<li><a href="<?= base_url('live-count-jurusan/'.$this->session->userdata('slug_jurusan')); ?>"><em class="fa fa-database">&nbsp;</em> Live Count Jurusan</a></li>
-			<?php endif ?>
-			<?php if(!empty($this->session->userdata('rektor')) || !empty($this->session->userdata('dekan')) || !empty($this->session->userdata('operator')) || !empty($this->session->userdata('admin'))): ?>
+			<?php if(!empty($this->session->userdata('dosen')) || !empty($this->session->userdata('wakil ketua III')) || !empty($this->session->userdata('admin'))): ?>
 			<li><a href="<?= base_url('live-count') ?>"><em class="fa fa-database">&nbsp;</em> Live Count</a></li>
 			<?php endif ?>
 			<?php if(!empty($this->session->userdata('admin'))): ?>

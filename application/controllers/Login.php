@@ -84,15 +84,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               'user' => 'Admin',
               'admin' => TRUE
             ];
-          }elseif ($admin->hak_akses === 'panitia-validasi') {
-            $data = [
-              'login' => TRUE,
-              'id_admin' => $admin->id_admin,
-              'username' => $admin->username_admin,
-              'hak_akses' => $admin->hak_akses,
-              'user' => 'Panitia Validasi',
-              'Panitia' => TRUE
-            ]; 
           }elseif ($admin->hak_akses === 'wakil ketua III') {
             $data = [
               'login' => TRUE,
@@ -109,16 +100,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               'username' => $admin->username_admin,
               'hak_akses' => $admin->hak_akses,
               'user' => 'Dosen',
-              'operator' => TRUE
-            ];
-          }elseif ($admin->hak_akses === 'panitia-pengawas') {
-            $data = [
-              'login' => TRUE,
-              'id_admin' => $admin->id_admin,
-              'username' => $admin->username_admin,
-              'hak_akses' => $admin->hak_akses,
-              'user' => 'Panitia pengawas',
-              'panitia' => TRUE
+              'dosen' => TRUE
             ];
           }
 

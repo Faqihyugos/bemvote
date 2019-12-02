@@ -19,16 +19,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       if($this->session->has_userdata('wakil ketua III')) redirect('');
       if($this->session->has_userdata('dosen')) redirect('');
 
-      // if($this->session->userdata('hak_akses') === 'operator-teknik') $fakultas = 'Teknik';
-      // elseif($this->session->userdata('hak_akses') === 'operator-fekon') $fakultas = 'Ekonomi';
-      // elseif($this->session->userdata('hak_akses') === 'operator-fok') $fakultas = 'Olahraga & Kesehatan';
-      // elseif($this->session->userdata('hak_akses') === 'operator-fis') $fakultas = 'Ilmu Sosial';
-      // elseif($this->session->userdata('hak_akses') === 'operator-fip') $fakultas = 'Ilmu Pendidikan';
-      // elseif($this->session->userdata('hak_akses') === 'operator-pertanian') $fakultas = 'Pertanian';
-      // elseif($this->session->userdata('hak_akses') === 'operator-fsb') $fakultas = 'Sastra & Budaya';
-      // elseif($this->session->userdata('hak_akses') === 'operator-fik') $fakultas = 'Ilmu Kelautan';
-      // elseif($this->session->userdata('hak_akses') === 'operator-mipa') $fakultas = 'MIPA';
-
       $perPage = 10;
       if($page === null) $offset = 0;
       else $offset = ($page * $perPage) - $perPage;
@@ -71,7 +61,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     // Halaman Pemilih untuk Admin, Dekan, Rektor
     public function pemilihadmin($page = null){
-      if($this->session->has_userdata('panitia')) redirect('');
+      if($this->session->has_userdata('admin')) redirect('');
 
       $perPage = 10;
       if($page === null) $offset = 0;
@@ -144,44 +134,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       }
     }
 
-    // Generate Token Pemilih
-    // public function gentoken(){
-    //   if(!$this->session->has_userdata('operator')) redirect('');
-    //   $karakter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890';
-    //   $token = '';
-    //   for($i = 0; $i < 5; $i++){
-    //     $pos = rand(0, strlen($karakter)-1);
-    //     $token .= $karakter{$pos};
-    //   }
-    //   $id_pemilih = $this->input->post('id_pemilih', TRUE);
-    //   $this->pemilih->generateToken($id_pemilih, $token);
-    //   $this->session->set_flashdata('token', $token);
-    //   redirect('pemilih');
-    // }
-
-    // // Melihat Token Pemilih
-    // public function looktoken(){
-    //   if(!$this->session->has_userdata('operator')) redirect('');
-
-    //   $token = $this->input->post('token_pemilih', TRUE);
-    //   $this->session->set_flashdata('token', $token);
-    //   redirect('pemilih');
-    // }
-
     public function search(){
       if($this->session->has_userdata('admin')) redirect('');
       if($this->session->has_userdata('wakil ketua III')) redirect('');
       if($this->session->has_userdata('dosen')) redirect('');
-
-      // if($this->session->userdata('hak_akses') === 'operator-teknik') $fakultas = 'Teknik';
-      // elseif($this->session->userdata('hak_akses') === 'operator-fekon') $fakultas = 'Ekonomi';
-      // elseif($this->session->userdata('hak_akses') === 'operator-fok') $fakultas = 'Olahraga & Kesehatan';
-      // elseif($this->session->userdata('hak_akses') === 'operator-fis') $fakultas = 'Ilmu Sosial';
-      // elseif($this->session->userdata('hak_akses') === 'operator-fip') $fakultas = 'Ilmu Pendidikan';
-      // elseif($this->session->userdata('hak_akses') === 'operator-pertanian') $fakultas = 'Pertanian';
-      // elseif($this->session->userdata('hak_akses') === 'operator-fsb') $fakultas = 'Sastra & Budaya';
-      // elseif($this->session->userdata('hak_akses') === 'operator-fik') $fakultas = 'Ilmu Kelautan';
-      // elseif($this->session->userdata('hak_akses') === 'operator-mipa') $fakultas = 'MIPA';
 
       $npm = $this->input->get('npm', true);
       $nama = $this->input->get('nama', true);
@@ -197,16 +153,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       if($this->session->has_userdata('admin')) redirect('');
       if($this->session->has_userdata('wakil ketua III')) redirect('');
       if($this->session->has_userdata('dosen')) redirect('');
-
-      // if($this->session->userdata('hak_akses') === 'operator-teknik') $fakultas = 'Teknik';
-      // elseif($this->session->userdata('hak_akses') === 'operator-fekon') $fakultas = 'Ekonomi';
-      // elseif($this->session->userdata('hak_akses') === 'operator-fok') $fakultas = 'Olahraga & Kesehatan';
-      // elseif($this->session->userdata('hak_akses') === 'operator-fis') $fakultas = 'Ilmu Sosial';
-      // elseif($this->session->userdata('hak_akses') === 'operator-fip') $fakultas = 'Ilmu Pendidikan';
-      // elseif($this->session->userdata('hak_akses') === 'operator-pertanian') $fakultas = 'Pertanian';
-      // elseif($this->session->userdata('hak_akses') === 'operator-fsb') $fakultas = 'Sastra & Budaya';
-      // elseif($this->session->userdata('hak_akses') === 'operator-fik') $fakultas = 'Ilmu Kelautan';
-      // elseif($this->session->userdata('hak_akses') === 'operator-mipa') $fakultas = 'MIPA';
 
       $npm = $this->input->get('npm', true);
       $nama = $this->input->get('nama', true);

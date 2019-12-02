@@ -13,12 +13,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       return $this->db->where('user_admin', $username)->where('password_admin', $password)->get('admin')->row();
     }
 
-    // // Fitur Mengaktifkan Status Pemilih
-    // public function aktifkanStatusPemilih($nim){
-    //   $sql = "update pemilih set status_pemilih = 'ya' where nim_pemilih = '$nim'";
-    //   return $this->db->query($sql);
-    // }
-
     // Nilai bawaan form login
     public function loginDefaultValues(){
       return [

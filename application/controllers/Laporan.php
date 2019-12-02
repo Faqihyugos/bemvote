@@ -9,8 +9,7 @@ class Laporan extends CI_Controller{
   }
 
   public function index(){
-
-    if($this->session->has_userdata('operator')) redirect('');
+    
     if($this->session->has_userdata('dosen')) redirect('');
     if($this->session->has_userdata('wakil ketua III')) redirect('');
     if($this->session->has_userdata('npm')) redirect('');

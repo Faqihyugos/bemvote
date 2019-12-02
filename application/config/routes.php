@@ -10,7 +10,7 @@ $route['login'] = 'login/index';
 $route['login-admin'] = 'login/admin';
 $route['logout'] = 'login/logout';
 
-// CRUD Fakultas
+// CRUD Jurusan
 $route['jurusan'] = 'jurusan/index';
 $route['jurusan/post'] = 'jurusan/store';
 $route['jurusan/edit/(:num)'] = 'jurusan/edit/$1';
@@ -40,11 +40,11 @@ $route['admin/delete'] = 'admin/destroy';
 
 // BEMVOTE Feature
 $route['live-count'] = 'vote/livecount';
-$route['live-count-fakultas'] = 'vote/livecountfakultas';
+// $route['live-count-fakultas'] = 'vote/livecountfakultas';
 // $route['live-count-fakultas'] = 'vote/waitlivecount';
 // $route['live-count'] = 'vote/waitlivecount';
 
-$route['statistik-fakultas'] = 'vote/statfakultas';
+// $route['statistik-fakultas'] = 'vote/statfakultas';
 $route['statistik-pemilih'] = 'vote/stat';
 $route['suara-masuk'] = 'vote/pemilihan';
 
