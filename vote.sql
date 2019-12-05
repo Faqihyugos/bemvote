@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 01 Des 2019 pada 20.16
+-- Waktu pembuatan: 05 Des 2019 pada 15.32
 -- Versi server: 10.3.16-MariaDB
 -- Versi PHP: 7.3.7
 
@@ -33,7 +33,7 @@ CREATE TABLE `admin` (
   `nama_admin` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_admin` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password_admin` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `hak_akses` enum('admin','panitia-validasi','wakil ketua III','dosen','panitia-pengawas') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `hak_akses` enum('admin','wakil ketua III','dosen') COLLATE utf8mb4_unicode_ci NOT NULL,
   `login_terakhir` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -42,8 +42,10 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id_admin`, `nama_admin`, `user_admin`, `password_admin`, `hak_akses`, `login_terakhir`) VALUES
-(1, 'Faqih', 'Admin', 'Admin11', 'admin', '2019-12-02 01:02:34'),
-(2, 'Ekhsan', 'ekhsan', 'admin11', 'panitia-validasi', '2019-12-02 02:11:28');
+(1, 'Faqih', 'Admin', 'Admin11', 'admin', '2019-12-05 20:51:57'),
+(3, 'Faqih', 'faq', 'faq123', 'admin', '2019-12-02 23:57:14'),
+(4, 'Aqwam', 'aqwam', 'aqwam123', 'wakil ketua III', '0000-00-00 00:00:00'),
+(5, 'don elsafitra', 'don', 'don123', 'dosen', '2019-12-05 20:47:14');
 
 -- --------------------------------------------------------
 
@@ -145,7 +147,7 @@ CREATE TABLE `pemilih` (
   `npm_pemilih` char(8) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nama_pemilih` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `tgl_lahir` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `telah_memilih` enum('ya','tidak') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `telah_memilih` enum('ya','tidak') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'tidak',
   `terakhir_login` datetime NOT NULL,
   `id_jurusan` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -155,10 +157,11 @@ CREATE TABLE `pemilih` (
 --
 
 INSERT INTO `pemilih` (`id_pemilih`, `npm_pemilih`, `nama_pemilih`, `tgl_lahir`, `telah_memilih`, `terakhir_login`, `id_jurusan`) VALUES
-(1, '10417001', 'Aan aji', '10-01-1999', 'ya', '2019-12-02 00:57:36', 1),
+(1, '10417001', 'Aan aji', '10-01-1999', 'ya', '2019-12-02 12:04:32', 1),
 (2, '10417002', 'Aulia', '30-10-1999', 'ya', '2019-12-02 00:58:31', 1),
-(3, '20417001', 'dio', '03-02-1999', 'tidak', '2019-12-02 00:00:00', 2),
-(4, '10217001', 'dian', '20-01-1999', 'tidak', '2019-12-02 00:00:00', 3);
+(3, '20417001', 'dio', '03-02-1999', 'ya', '2019-12-02 13:37:32', 2),
+(4, '10217001', 'dian', '20-01-1999', 'ya', '2019-12-03 00:03:06', 3),
+(13, '20417082', 'carlos', '07-12-1999', 'tidak', '0000-00-00 00:00:00', 2);
 
 -- --------------------------------------------------------
 
@@ -179,7 +182,9 @@ CREATE TABLE `pemilihan` (
 
 INSERT INTO `pemilihan` (`id_pemilihan`, `waktu_memilih`, `id_pemilih`, `id_paslon`) VALUES
 (1, '2019-12-02 00:51:32', 1, 1),
-(2, '2019-12-02 00:58:22', 2, 2);
+(2, '2019-12-02 00:58:22', 2, 2),
+(3, '2019-12-02 12:08:15', 3, 2),
+(4, '2019-12-02 13:38:22', 4, 2);
 
 --
 -- Indexes for dumped tables
@@ -241,7 +246,7 @@ ALTER TABLE `pemilihan`
 -- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_admin` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `detailcapres`
@@ -271,13 +276,13 @@ ALTER TABLE `paslon`
 -- AUTO_INCREMENT untuk tabel `pemilih`
 --
 ALTER TABLE `pemilih`
-  MODIFY `id_pemilih` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_pemilih` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `pemilihan`
 --
 ALTER TABLE `pemilihan`
-  MODIFY `id_pemilihan` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pemilihan` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
