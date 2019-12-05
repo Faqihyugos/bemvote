@@ -39,8 +39,8 @@
                ?>
 							<tr>
 								<td><?= $i++ ?></td>
-								<td><?= $paslon->nama_paslon ?></td>
-								<td><?= $paslon->nama_koalisi ?></td>
+								<td><?= cetak($paslon->nama_paslon) ?></td>
+								<td><?= cetak($paslon->nama_koalisi) ?></td>
 								<td><?= $paslon->jurusan_koalisi ?></td>
 								<td><?= $paslon->nomor_urut ?></td>
                 <?php if($this->session->has_userdata('admin')): ?>

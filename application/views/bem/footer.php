@@ -127,27 +127,5 @@
 		</script>
 	<?php endif ?>
 
-	<?php if($this->session->has_userdata('token')): ?>
-		<div class="modal fade" id="msgModal">
-			<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h2>Operator BEM-VOTE</h2>
-				</div>
-				<div class="modal-body">
-					<h3>Token Anda : <strong><?= $this->session->userdata('token') ?></strong></h3>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-		</div>
-
-		<script type="text/javascript">
-			$('#msgModal').modal('show');
-		</script>
-	<?php endif ?>
-
 </body>
 </html>

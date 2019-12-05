@@ -48,12 +48,7 @@ class Laporan extends CI_Controller{
     $totalTidakMemilihMI = $this->vote->totalTidakMemilihMI();
     $totalSuaraMasukMIStat = $this->vote->totalSuaraMasukMIStat();
 
-    $html = $this->load->view('laporan', compact('paslonSatu', 'paslonDua', 'totalPemilih', 'totalSuaraMasuk',
-     'totalTidakMemilih', 'totalSuaraMasukStat', 'totalSuaraMasukDuaStat', 'totalSuaraMasukDua',
-      'totalSuaraMasukSatuStat', 'totalSuaraMasukSatu', 'paslons',
-       'totalSuaraMasukSIStat', 'totalTidakMemilihSI', 'totalSuaraMasukSI', 'totalPemilihSI',
-        'totalPemilihSK', 'totalSuaraMasukSK', 'totalTidakMemilihSK', 'totalSuaraMasukSKStat',
-         'totalPemilihMI', 'totalSuaraMasukMI', 'totalTidakMemilihMI', 'totalSuaraMasukMIStat'), true);
+    $html = $this->load->view('laporan', compact('paslonSatu', 'paslonDua', 'totalPemilih', 'totalSuaraMasuk','totalTidakMemilih', 'totalSuaraMasukStat', 'totalSuaraMasukDuaStat', 'totalSuaraMasukDua','totalSuaraMasukSatuStat', 'totalSuaraMasukSatu', 'paslons','totalSuaraMasukSIStat', 'totalTidakMemilihSI', 'totalSuaraMasukSI', 'totalPemilihSI','totalPemilihSK', 'totalSuaraMasukSK', 'totalTidakMemilihSK', 'totalSuaraMasukSKStat','totalPemilihMI', 'totalSuaraMasukMI', 'totalTidakMemilihMI', 'totalSuaraMasukMIStat'), true);
 
     $pdf = new DOMPDF();
     $pdf->load_html($html);

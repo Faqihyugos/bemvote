@@ -39,8 +39,8 @@
               ?>
 							<tr>
 								<td><?= $i++ ?></td>
-								<td><?= $admin->nama_admin ?></td>
-								<td><?= $admin->user_admin ?></td>
+								<td><?= cetak($admin->nama_admin) ?></td>
+								<td><?= cetak($admin->user_admin) ?></td>
 								<td><?= $admin->hak_akses ?></td>
 								<td><?= $admin->login_terakhir ?></td>
 								<td>

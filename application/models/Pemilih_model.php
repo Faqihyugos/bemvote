@@ -99,12 +99,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       return $this->db->select('*')->from('pemilih')->join('jurusan','pemilih.id_jurusan = jurusan.id_jurusan')->where('pemilih.id_jurusan', $id)->get()->result();
     }
 
-    // // Menggenerate Token Pemilih\
-    // public function generateToken($id, $data){
-    //   $sql = "update pemilih set token_pemilih = '$data' where id_pemilih = $id";
-    //   return $this->db->query($sql);
-    // }
-
     // mencari pemilih berdasarkan npm, nama, dan jurusan
     public function searchPemilih($npm, $nama, $jurusan){
       return $this->db->select('*')->from('pemilih')->join('jurusan','pemilih.id_jurusan = jurusan.id_jurusan')->where('nama_jurusan', $jurusan)->like('npm_pemilih', $npm)->like('nama_pemilih', $nama)->order_by('npm_pemilih', 'ASC')->get()->result();

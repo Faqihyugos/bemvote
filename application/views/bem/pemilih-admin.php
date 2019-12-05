@@ -64,8 +64,8 @@
               ?>
 							<tr>
 								<td><?= $i++ ?></td>
-								<td><?= $pemilih->npm_pemilih ?></td>
-								<td><?= $pemilih->nama_pemilih ?></td>
+								<td><?= cetak($pemilih->npm_pemilih) ?></td>
+								<td><?= cetak($pemilih->nama_pemilih) ?></td>
 								<td class="status">
                 <?php if($pemilih->telah_memilih === 'ya'): ?>
                   <span class="fa fa-check"></span>
@@ -121,8 +121,8 @@
               ?>
 							<tr>
 								<td><?= $i++ ?></td>
-								<td><?= $pemilih->npm_pemilih ?></td>
-								<td><?= $pemilih->nama_pemilih ?></td>
+								<td><?= cetak($pemilih->npm_pemilih) ?></td>
+								<td><?= cetak($pemilih->nama_pemilih) ?></td>
 								<td><?= $pemilih->terakhir_login ?></td>
                 <?php if($this->session->has_userdata('admin')): ?>
 								<td>
@@ -176,6 +176,7 @@
                     <?= form_input('tgl_lahir', $input->tgl_lahir, ['class' => 'form-control', 'placeholder' => '01-12-1999	']) ?>
 									</div>
 								</div>
+								
                 <!-- Name input-->
 								<div class="form-group">
 									<label class="col-md-3 control-label" for="name">Jurusan Pemilih</label>

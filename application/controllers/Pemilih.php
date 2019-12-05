@@ -61,7 +61,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     // Halaman Pemilih untuk Admin, Dekan, Rektor
     public function pemilihadmin($page = null){
-      if($this->session->has_userdata('admin')) redirect('');
+      if($this->session->has_userdata('panitia')) redirect('');
 
       $perPage = 10;
       if($page === null) $offset = 0;
@@ -117,7 +117,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $this->load->view('template', compact('main_view', 'jurusans', 'input', 'pemilihs', 'pemilihJurusans', 'belumMemilihs'));
         return;
       }
-      $pemilih->telah_memilih === 'tidak';
       $this->pemilih->insertPemilih($input);
       $this->session->set_flashdata('msg', 'Pemilih Berhasil Di Tambahkan!');
       redirect('pemilih-admin');

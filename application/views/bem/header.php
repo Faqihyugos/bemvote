@@ -65,9 +65,6 @@
 			<?php if(!empty($this->session->userdata('admin'))): ?>
 				<li><a href="<?= base_url('laporan') ?>"><em class="fa fa-file-pdf-o">&nbsp;</em> Laporan</a></li>
 			<?php endif ?>
-			<?php if(!empty($this->session->userdata('operator'))): ?>
-				<li><a href="<?= base_url('laporan-operator') ?>"><em class="fa fa-file-pdf-o">&nbsp;</em> Laporan</a></li>
-			<?php endif ?>
 			<li><a href="<?= base_url('logout') ?>"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
 		</ul>
 	</div><!--/.sidebar-->

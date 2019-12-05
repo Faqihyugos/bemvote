@@ -36,7 +36,7 @@
               ?>
 							<tr>
 								<td><?= $i++ ?></td>
-								<td class="jurusan"><?= $jurusan->nama_jurusan ?></td>
+								<td class="jurusan"><?= cetak($jurusan->nama_jurusan) ?></td>
 								<td>
 									<a href="<?= base_url('jurusan/edit/'.$jurusan->id_jurusan) ?>" class="btn btn-warning pull-left" style="color:white;">Edit</a>
                   <?= form_open('jurusan/delete') ?>

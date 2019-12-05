@@ -7,7 +7,7 @@ $autoload['libraries'] = array('session');
 
 $autoload['drivers'] = array();
 
-$autoload['helper'] = array('form', 'url');
+$autoload['helper'] = array('form', 'url','xss');
 
 /*
 | -------------------------------------------------------------------
